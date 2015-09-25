@@ -28,7 +28,7 @@ api_create_delivery_path = "{}{}".format(url, create_delivery_path)
 API_KEY = "2c465122-3188-42b6-b5b6-d5e8d190e71b"
 auth = (API_KEY, "")
 
-inventory = []
+inventory = [] 
 order_details = [] 
 
 def get_quote():
@@ -112,12 +112,11 @@ def demo():
 	with open('inventory.txt') as f:
 		for line in f:
 			inventory.append(line)
-	f.close()	
+	f.close()
+	print(inventory)	
 	while(today != week):
 		for i in inventory:
-			print(i)	
-			if (i['exp_date'] <=today):
-				order_details.append(inventory[i]['name'])
+			print(inventory[i])
 		print(order_details)
 		today = date(today.year, today.month, today.day+1)
 	return "Ready to restock!"

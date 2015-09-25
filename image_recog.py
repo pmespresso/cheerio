@@ -38,10 +38,10 @@ def classify(in_img, ingredients):
 	print(ingredients)
 	f = open('./inventory.txt', 'r+b')
 	for item in ingredients:
-		add = str(item)
-		f.write(add)
+		
+		json.dump(item,f)
 	f.close()
 	
 
-#dict = []
-#classify('./imgs/in_01.jpg',dict)
+dict = []
+classify('./imgs/in_01.jpg',dict)
