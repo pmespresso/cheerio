@@ -1,0 +1,1 @@
+{'entry_date': datetime.date(2015, 10, 11), 'exp_date': datetime.date(2015, 10, 16), 'name': u'frozen yogurt', 'class': u'meat'}

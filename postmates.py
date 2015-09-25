@@ -2,11 +2,14 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 from flask import render_template
-import datetime
+from image_recog import classify
 
 import requests
 import json
 import ast
+import picamera
+import time
+from datetime import date
 
 #For getting a Quote
 quote_params = {
@@ -26,7 +29,7 @@ API_KEY = "2c465122-3188-42b6-b5b6-d5e8d190e71b"
 auth = (API_KEY, "")
 
 inventory = []
-order_details = []
+order_details = [] 
 
 def get_quote():
 	r = requests.post(api_quote_path, data=quote_params, auth=auth)
@@ -90,6 +93,34 @@ def make_order():
 	r = requests.post(api_create_delivery_path, data=data_in, auth=auth)
 	return r
 
+@app.route("/scan")
+def scan():
+	with picamera.PiCamera() as camera:
+		print("Please allow a moment for us to scan the object. Try to position the image to optimize focus.")
+		time.sleep(5)
+		camera.start_preview()
+		time.sleep(15)
+		camera.stop_preview()
+		camera.capture('./imgs/in_01.jpg')
+	classify('./imgs/in_01.jpg',inventory)
+	return "Pleaaaaaaaaaaaase be my friend"
+
+@app.route("/demo")
+def demo():
+	today = date(2015, 10, 11)
+	week = date(2015, 10, 25)
+	with open('inventory.txt') as f:
+		for line in f:
+			inventory.append(line)
+	f.close()	
+	while(today != week):
+		for i in inventory:
+			print(i)	
+			if (i['exp_date'] <=today):
+				order_details.append(inventory[i]['name'])
+		print(order_details)
+		today = date(today.year, today.month, today.day+1)
+	return "Ready to restock!"
 @app.route("/")
 def index():
 	return(render_template('index.html'))
