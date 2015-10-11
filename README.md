@@ -1,4 +1,4 @@
-# PiM: The Virtual Fridge Manager
+# PiM: The Virtual Fridge Manager.
 
 This is the project we made for Cal Hacks 2.0
 
