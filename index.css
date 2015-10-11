@@ -4,7 +4,9 @@
 .page-header h3{
 	color: gray;
 }
+
 #mainTable{
-	margin: 10px;
-	margin-right: 10px;
+	width: 90%;
+	margin-left:5%;
+	margin-right: 5%;
 }
