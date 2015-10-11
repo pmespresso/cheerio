@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="../../favicon.ico">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    		<meta name="description" content="">
+    		<meta name="author" content="">
+		<title>PiM Homepage</title>
+
+		<link rel="stylesheet" type="text/css" href="og1css.css"></link>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  		<!-- Custom styles for this template -->
+    		<link href="jumbotron.css" rel="stylesheet">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">PiM</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+ <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div align = "center"> <h1>Say goodbye to expired food in your fridge</h1> </div>
+        <p> Everything is temporary, including food. This unfortunate fact is demonstrated by expiration dates that are stamped on 
+
+perishable foods that we buy and store in our refrigerator. We want to revolutionize the way grocery shopping is done by 
+
+introducing a device that alerts you if something in your fridge is about to expire and then delivering the required items to you 
+
+within an hour.</p>
+        <p><form action="about.html">
+    <input type="submit" value="Learn More"></form></p>
+      </div>
+    </div>
+ <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Quantity of items</h3>
+          <p>This displays the amount of items in your fridge as scanned by the Smith Scanner.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+	<div class="col-md-3">
+          <h3>Items you have</h3>
+          <p>This lists all the items currently in your fridge.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-3">
+          <h3>Date was purchased</h3>
+          <p>The scanner records the date that you placed the item into the fridge for the first time.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-3">
+          <h3>Expiration date</h3>
+          <p>Using a complex algorithm, our scanner is able to accurately predict when the product is going to expire, allowing 
+
+you to focus on other luxuries. Never be worried again!</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      
+      <footer>
+	<div class="row">
+	  <div class="span2">
+	    <p class="bottom"> &copy; Company 2014</p>
+	  </div>
+	    <div align = "right">
+	    <p id="bottomDel"> Delivery service powered by: </p>
+	    </div>
+	
+	</div>
+       <img class="bottom" src = "postmates_logo_horiz_black.png" align = "right">
+	  	
+       
+    </div> <!-- /container -->
+</footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
